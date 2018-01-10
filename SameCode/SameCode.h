@@ -5,6 +5,9 @@
 class SameCode {
 public:
 
+	// 是否禁用自动根据用户代码修改关键字表
+	bool isStaticMode = true;
+
 	// （默认）关键词
 	std::string keyWords[MAX_KEY_WORDS] = { "void", "int", "for", "char", "if", "else", "while", "do", "break", "class" };
 	

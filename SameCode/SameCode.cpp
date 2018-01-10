@@ -74,9 +74,9 @@ map<string, int> SameCode::countWords(string code)
 			if (tmp != "") {
 				if (m.count(tmp))
 					m[tmp]++;
-				//注释以下则发现没有该键时不添加新的
-				//else
-				//	m[s] = 1;
+				//以下则发现没有该键时不添加新的
+				else if (!isStaticMode)
+					m[tmp] = 1;
 				tmp = "";
 			}
 	}
@@ -84,9 +84,9 @@ map<string, int> SameCode::countWords(string code)
 	if (tmp != "") {
 		if (m.count(tmp))
 			m[tmp]++;
-		//注释以下则发现没有该键时不添加新的
-		//else
-		//	m[s] = 1;
+		//以下则发现没有该键时不添加新的
+		else if (!isStaticMode)
+			m[tmp] = 1;
 	}
 	return m;
 }
